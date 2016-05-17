@@ -1,50 +1,51 @@
 ---
 layout: chapter
-title: Semantics
+title: 语义化(Semantics)
 section: Background
 permalink: /chapters/semantics/
 description: Why naming something based on what it is, instead of how it looks or behaves is a cornerstone of writing well architected and maintainable CSS code.
 ---
 
-**Summary:** Name something based on what it *is*, not how it *looks* or *behaves*.
+**概述:** 基于这 *是* 什么命名，而不是基于它 *像* 什么或 *能做* 什么命名。
 
-## The longer explanation
+## 长版本解释
 
-Semantic HTML isn't just about the elements we use&mdash;it's pretty obvious that you should use a `<a>` for a link, a `<table>` for tabular data and a `<p>` for a paragraph etc.
+语义化(semantic)的 HTML 不仅仅关乎我们所使用的元素&mdash;&mdash;你当然知道一个链接应该使用 `<a>` 标签，表格数据应该使用 `<table>` 标签，段落使用 `<p>` 等等。
 
-More importantly, it's about the class names (and IDs) we add, that provide *additional* hooks for CSS (and Javascript) to enhance as appropriate.
+更重要的是，它和我们所添加的类名(class names)和IDs有关。而类名和IDs为 CSS 和 JavaScript提供额外的机制，让我们更容易去操作和增强 HTML 元素。
 
-It's easy to add class names without thought as to their naming but naming is very important.
+很容易出现不经过思考而随意添加类名的场景，但现实中命名却又特别重要。
 
-> &ldquo;There are only two hard things in Computer Science: cache invalidation and naming things.&rdquo;
-<br>&mdash; <cite>Phil Karlton</cite>
 
-This is because humans are good at understanding human communication and bad at understanding abbreviated, non-semantic abstractions.
+> &ldquo;在计算机科学领域，有两大难题，如何让缓存失效(cache invalidation)和如何给各种东西命名。&rdquo;
+<br>&mdash; <cite>Phil Karlton, 网景架构师</cite>
 
-## Good and bad examples of class names
+这是由于人只是擅长和人沟通，却不太能理解简短的，不具有语义化的抽象概念。
 
-Try and spot the difference between non-semantic and semantic class names...
+## 类名好坏对比
 
-	<!-- bad -->
+试着找出非语义化和语义化类名的区别...
+
+	<!-- 不好 -->
 	<div class="red pull-left">
 	<div class="grid row">
 	<div class="col-xs-4">
 
-It's not clear at all *what* this HTML represents. You *might* have an *idea* of what these things *look like* (on small or large screens) but that is all.
+这里完全看不出这段 HTML 代码要表达 *什么*。你 *可能* 会说它 *看起来* 怎样（比如应该在小屏幕还是大屏幕上），但也就仅此而已。
 
-	<!-- good -->
+	<!-- 好 -->
 	<div class="header">
 	<div class="basket">
 	<div class="product">
 	<div class="searchResults">
 
-Here I know exactly what I am looking at. I know the intention of what this HTML represents. And I have no idea how it looks&mdash;that's what CSS is responsible for. Semantic class names mean something to both HTML *and* CSS (and JS).
+这段代码就正是我所推崇的。我很清楚地知道这段 HTML 代表着什么。虽然我不知道它看起来应该是怎样的，但我并不在乎，这是 CSS 存在的价值。而语义化的类名对 HTML 和 CSS 甚至 JS 都很有意义。
 
-So **why** else should we use semantic class names?
+所以，*为什么* 其他人应该使用语义化的类名呢？
 
-## Because it's easier to understand.
+## 因为更容易理解
 
-Whether you're looking at the HTML or the CSS, you know what you're affecting. With visual class names you end up having to sprinkle several class names on to each element, ending up with a vague understanding of the intention of these visual class names. This is hard to maintain.
+若使用语义化类名，不论你是在修改 HTML 或者 CSS，你都清楚你将造成的影响。而使用视觉化类名(visual class names)的方式，你不得不在每一个元素上写很多类名，最终你可能只是对这些类名有一个模糊的理解，而不清楚它真正的意图是什么。而且，视觉化类名非常难以维护。
 
 ## Because we are building responsive websites.
 
