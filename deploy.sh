@@ -31,7 +31,7 @@ rm -R _site/
 # git config user.email "$USER_EMAIL"
 
 git add -fA
-git commit --allow-empty -m "$(git log -1 --pretty=%B) [auto]"
+git commit --allow-empty -m "$(git log -1 --pretty=%B) [$(date +"%d-%m-%Y")]"
 git push -f $ORIGIN_URL gh-pages
 
 # Move back to previous branch.
