@@ -9,7 +9,7 @@ id: home
 
 	<h1>MaintainableCSS</h1>
 	<p>如何编写 CSS 而不用再去过分担心原有的样式会受你的影响？<em>MaintainableCSS</em> 就是这样一种哲学，教你编写 <em>模块化</em>, <em>可扩展</em> 以及 <em>可维护</em> 的CSS.</p>
-	<a class="hero-button" href="{{ site.url }}/chapters/introduction/">现在阅读</a>
+	<a class="hero-button" href="{{ site.url }}/chapters/introduction/">马上阅读</a>
 </div>
 <!--
 	<h2>Maintainable &mdash; Adjective</h2>
@@ -75,11 +75,11 @@ id: home
 			<h3>方便 AB 测试与升级</h3>
 			<p>想要测试一个模块的不同样式？MaintainableCSS 会让其变得轻松而愉快。</p>
 		</div>
-		<a class="benefit-readNowButton" href="{{ site.url }}/chapters/introduction">Read now</a>
+		<a class="benefit-readNowButton" href="{{ site.url }}/chapters/introduction">马上阅读</a>
 	</div>
 </div>
 <div class="recommendations">
-	<h2 class="recommendations-title">What others say</h2>
+	<h2 class="recommendations-title">评价</h2>
 	<div class="recommendations-item">
 		<blockquote>
 			<p>&ldquo;A handy little read on learning how to write modular and maintainable CSS.&rdquo;
