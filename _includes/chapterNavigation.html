@@ -1,0 +1,10 @@
+<div class="chapterNavigation {% if include.last %}chapterNavigation-last {% endif %}">
+	<div class="chapterNavigation-inner">
+		{% if page.previous %}
+			<a class="chapterNavigation-previous" href="{{page.previous.url | prepend: site.url }}">&larr; <span class="chapterNavigation-label">Previous:</span> {{page.previous.title}}</a>
+		{% endif %}
+		{% if page.next %}
+			<a class="chapterNavigation-next" href="{{page.next.url | prepend: site.url }}"><span class="chapterNavigation-label">Next:</span> {{page.next.title}} &rarr;</a>
+		{% endif %}
+	</div>
+</div>

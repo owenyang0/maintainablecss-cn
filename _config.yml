@@ -1,0 +1,9 @@
+name: MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。
+markdown: markdown
+url: /maintainablecss-cn
+include: ['_pages']
+collections:
+  chapters:
+    output: true
+    permalink: /:collection/:title/
+description: MaintainableCSS 是一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。

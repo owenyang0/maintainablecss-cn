@@ -1,0 +1,58 @@
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+
+{% if page.description %}
+	<meta property="og:description" content="{{ page.description }}">
+{% else %}
+	<meta property="og:description" content="{{ site.description }}">
+{% endif %}
+
+<meta property="og:url" content="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+<meta property="og:site_name" content="MaintainableCSS">
+<meta property="og:image" content="{{ site.url }}/assets/img/card1.png">
+<meta property="og:image:width" content="118">
+<meta property="og:image:height" content="118">
+
+<meta name="twitter:card" content="summary">
+
+{% if page.description %}
+	<meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+	<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {% endif %} {{ site.name }}">
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+
+{% if page.description %}
+	<meta itemprop="description" content="{{ page.description }}">
+{% else %}
+	<meta itemprop="description" content="{{ site.description }}">
+{% endif %}
+
+<meta property="twitter:image" content="{{ site.url }}/assets/img/card1.png">
+
+<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css" type="text/css" media="all">
+
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+
+{% include favicon.html %}
+
+<link rel="author" href="https://plus.google.com/u/0/+AdamSilver1">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-47311666-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
