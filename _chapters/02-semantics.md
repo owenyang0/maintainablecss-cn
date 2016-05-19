@@ -41,67 +41,78 @@ description: Why naming something based on what it is, instead of how it looks o
 
 这段代码就正是我所推崇的。我很清楚地知道这段 HTML 代表着什么。虽然我不知道它看起来应该是怎样的，但我并不在乎，这是 CSS 存在的价值。而语义化的类名对 HTML 和 CSS 甚至 JS 都很有意义。
 
-所以，*为什么* 其他人应该使用语义化的类名呢？
+所以，*为什么* 我们应该使用语义化的类名呢？
 
 ## 因为更容易理解
 
 若使用语义化类名，不论你是在修改 HTML 或者 CSS，你都清楚你将造成的影响。而使用视觉化类名(visual class names)的方式，你不得不在每一个元素上写很多类名，最终你可能只是对这些类名有一个模糊的理解，而不清楚它真正的意图是什么。而且，视觉化类名非常难以维护。
 
-## Because we are building responsive websites.
 
-Styles often need changing based on viewport size. For example, you might float elements on big screens and not on small screens. So if you have a class called `clearfix` but you don't clear on small screens, then you now have misleading code.
+## 因为要构建响应式站点
 
-If you use semantic class names, then you can style them differently based on media queries making it easier to maintain.
+一般说来，不同的视图(viewport)会有不同的样式。比如，你可能需要在大屏上浮动(float)一个元素，在小屏不浮动。如果你有一个叫 `.clearfix` 的类名来清理浮动，但在小屏上的效果却和类名不一样，这看起来会不会让人困惑呢？
 
-## Because semantic class names are easier to find.
+使用语义化的类名，你就会基于 mediea queries 去编写样式，这会让 CSS 更易维护。
 
-If an element has classes based on how it looks such as `.red`, `clearfix` and `.pull-left`, then these classes will be scattered all over the codebase&mdash;so if you’re trying to hunt for a particular piece of HTML, the class name is not going to help you.
 
-On the other hand, if your class names are semantic, a search will find the HTML in question. Or more typically, if you're beginning your search via the HTML (think: inspecting an element) then finding unique CSS selectors based on the class name will be far easier.
+## 因为更容易查找
 
-## Because you don't want unexpected regression.
+如果一个元素是基于其外在表像命名，比如 `.red`, `.clearfix`, 和 `.pull-left` 等，那么这些类名就会像垃圾一样散落在代码库的任何地方&mdash;&mdash;当你搜索一段特定的 HTML 代码的时候，类名不会起任何作用。
 
-If you have utility non-semantic classes that describe the look then when you edit one of these classes, they will propagate to every single element with that class. Knowing CSS as you do, do you feel comfortable that the propagation didn't cause unexpected problems elsewhere?
+换句话说，如果你的类名足够语义化，搜索特定代码片段是很简单的事。更常见的是，当你从头搜索你的 HTML(想像一下浏览器上的审查元素)去找类名的时候，查找唯一的 CSS 选择器肯定会快很多。
 
-Semantic class names are unique, so when editing one, you *can* feel comfortable that your change only applies to the module in question as you intended, making maintainance easier.
 
-## Because you don't want to be afraid to update code.
+## 因为不想做无故的回归测试
 
-Directly linked with the previous point about regression, when you don't feel comfortable touching code, you end up causing problems or being afraid to touch it at all. Therefore you end up with redundant code, increasing maintainance issues.
+如果你使用描述性的，非语义化的类名，那么当你修改其中一个类名的时候，样式的改变会影响每一个使用这个类名的元素。基于你使用 CSS 的经验，你能保证你的修改不会在其他地方产生不可预知的问题吗？
 
-## Because it helps automated functional testing.
+语义化的类名是唯一的，所以当你编辑其中一个的时候，你 *能* 自信地说，你的修改只会影响你想要改变的那个模块，维护起来更简单。
 
-Automated functional tests work by searching for particular elements, interacting with them (typing in text, clicking buttons and links etc) and verifying based on that.
 
-If you have visual class names all over the HTML, then there is no reliable way to target particular elements and act upon them.
+## 因为不用再恐惧更新代码
 
-## Because it provides meaningful hooks for Javascript to enhance.
+和前一个有关回归测试的那一点有关，当你对修改的代码不够自信的时候，你很有可能会造成 BUG 接着便会由于害怕出错而不再碰那些代码。更可怕的是会造成恶性循环，写很多冗余代码，最后变得越来越不具有可维护性。
 
-Just like these hooks help automated testing, they are also useful to enhance behaviour with Javascript. Visual class names can't be used as a reliable way to target modules or components.
 
-## Because of general maintainance concerns.
+## 因为有助于自动化测试
 
-If you name something based on what it is, you won't have to touch the HTML again i.e. a heading is always a heading, no matter what it *looks* like.
+自动化功能测试需要定位特定的元素，与其进化交互（输入文本，点击按钮、链接等等），基于这些操作进行相关校验。
 
-The styling might change but you only have to update the CSS. This is otherwise known as Loose Coupling and this improves maintainability.
+若你的 HTML 通篇都使用描述性的类名，那么你将不会有一个可靠方式去定位一个特定的元素，更惶论与其交互了。
 
-## Because utility classes increase noise when debugging.
 
-When debugging an element, there will be several applicable CSS selectors making it noisey to debug.
+## 因为为JavaScript提供了有意义的接口
 
-## Because the standards recommend it.
+就像和自动化测试一样，语义化的类名对JavaScript来说同样有意义。描述性的类名不具有可靠性，不可用于定位相应的模块或组件。
 
-On using the class attribute, HTML5 specs say in 3.2.3.7:
 
-> "[...] authors are encouraged to use values that describe the nature of the content, rather than values that describe the desired presentation of the content."
+## 因为常规维护的担心
 
-## Because you get a performance bump.
+若你是基于该元素是什么而命名，你就不必再次修改 HTML 的类名。如，heading 始终是 heading, 你不用管它变成什么样子。
 
-This is a *very* small benefit but when you have one class name per element, you end up with smaller HTML. With visual classes you end up with multiple class names per element and that can add up.
+样式可能会改变，但你只需要改变你的 CSS。这在另一个方面来说，实际是上松耦合从而提高了可维护性。
 
-## Because it adheres to the reuse rule.
 
-If you don't use semantic class names, then you will likely be breaking the rules of reuse. Read the next chapter to find out more.
+## 因为非语义类名调试困难
+
+当你调试(debug)一个元素的时候，会出现很多类似的 CSS 选择器，增加了调试的难度。
+
+
+## 因为标准推荐使用
+
+HTML5 的规范在 [3.2.5.7](https://www.w3.org/TR/html5/dom.html#classes) 里有说，使用类名属性。
+
+> "[...] 更鼓励使用能描述内容本质的类名，而不是那些只是描述其外在表像的值。"
+
+
+## 因为能带来性能的提升
+
+这是一个 *非常* 小的优势，因为当你一个元素只有一个类名的时候，你的整个 HTML 代码体积都会更小。而使用描述性的类名，每个元素有无数个类名，结果自然与前者不一样。
+
+
+## 因为和重用规则有关
+
+如果你没有使用语义化类名，你有可能会是误解了重用(reuse)的概念，而误用重用。阅读下章，获得更多。
 
 <!--## Why? Because visual class names might declare the same property!
 
@@ -110,6 +121,6 @@ It's likely that several different utility classes could refer to the same prope
 Think of an example of this.
 -->
 
-## Final thoughts about semantics
+## 最后想想语义化
 
-Semantic class names are a corner stone of *MaintainableCSS*. Without this, everything else makes little sense. So name something based on what it is and everything else follows.
+语义化的类名是 *MaintainableCSS* 的基石，没有它，一切都没意义。所以，基于是什么命名，其他所有都将受益。
