@@ -14,4 +14,5 @@ jekyll serve --baseurl '/maintainablecss-cn'
 
 ### 贡献者
 * [Owen Yang](https://github.com/owenyang0)
+* [Bang Wu](https://github.com/bangwu)
 
