@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+	    <title>Modules | MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。</title>
+	    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Modules -  MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+
+
+	<meta property="og:description" content="Learn the differences between modules and components and how to identify them within a design. We'll also code up some example modules together.">
+
+
+<meta property="og:url" content="/maintainablecss-cn/chapters/modules/">
+<meta property="og:site_name" content="MaintainableCSS">
+<meta property="og:image" content="/maintainablecss-cn/assets/img/card1.png">
+<meta property="og:image:width" content="118">
+<meta property="og:image:height" content="118">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="Learn the differences between modules and components and how to identify them within a design. We'll also code up some example modules together.">
+
+
+<meta name="twitter:title" content="Modules -  MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+
+
+	<meta itemprop="description" content="Learn the differences between modules and components and how to identify them within a design. We'll also code up some example modules together.">
+
+
+<meta property="twitter:image" content="/maintainablecss-cn/assets/img/card1.png">
+
+<link rel="stylesheet" href="/maintainablecss-cn/assets/css/main.css" type="text/css" media="all">
+
+<link rel="canonical" href="/maintainablecss-cn/chapters/modules/">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/maintainablecss-cn/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/maintainablecss-cn/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/maintainablecss-cn/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/maintainablecss-cn/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/maintainablecss-cn/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/maintainablecss-cn/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/maintainablecss-cn/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/maintainablecss-cn/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/maintainablecss-cn/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/maintainablecss-cn/manifest.json">
+<link rel="mask-icon" href="/maintainablecss-cn/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="/maintainablecss-cn/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create','UA-57882600-1','auto');
+  ga('send','pageview');
+
+</script>
+
+
+	</head>
+	<body>
+		<div class="header">
+	<div class="header-inner">
+		<!-- <div class="logo"><a href="/">MaintainableCSS</a></div> -->
+		<div class="logo"><a href="/maintainablecss-cn/index.html"><img src="/maintainablecss-cn/assets/img/logo_small.png" width="35" height="35"></a></div>
+		<div class="navigation">
+	<a class="" href="/maintainablecss-cn/index.html">首页</a>
+  <a class="" href="/maintainablecss-cn/chapters/">目录</a>
+	<a href="http://maintainablecss.com/">English</a>
+	<a href="https://github.com/owenyang0/maintainablecss-cn">Github</a>
+</div>
+	</div>
+</div>
+        <div class="chapterNavigation ">
+	<div class="chapterNavigation-inner">
+		
+			<a class="chapterNavigation-previous" href="/maintainablecss-cn/chapters/conventions/">&larr; <span class="chapterNavigation-label">Previous:</span> Conventions</a>
+		
+		
+			<a class="chapterNavigation-next" href="/maintainablecss-cn/chapters/state/"><span class="chapterNavigation-label">Next:</span> State &rarr;</a>
+		
+	</div>
+</div>
+        <div class="content">
+			<h1>Modules</h1>
+           	<h2 id="whats-a-module">What’s a module?</h2>
+
+<p>A module is a distinct, independent unit, that can be combined with other modules to form a more complex structure.</p>
+
+<p>In a living room, you can consider the TV, the sofa and the wall art modules. All coming together to create a useable room.</p>
+
+<p>If you take one of the units away, the rest still works just fine. I don’t need the TV to be able to sit on the sofa etc.</p>
+
+<p><strong>In a website each of these can be considered modules:</strong> header, footer, search form, sign up form, shopping basket, article, product list, navigation, homepage promo, archive list etc.</p>
+
+<h2 id="whats-a-component">What’s a component?</h2>
+
+<p>A module is made up of components. Without the components, the module is incomplete or broken.</p>
+
+<p>For example a sofa is made up of the frame, upholstry, legs, cushions and back pillows, all of which are required components to allow the sofa to function as designed.</p>
+
+<p>A logo <em>module</em> might consist of copy, an image and a link, each of which are components. Without the image the logo is broken, without the link the logo is incomplete.</p>
+
+<h2 id="modules-vs-components">Modules vs components</h2>
+
+<p>Sometimes it can be tricky to decide whether something is a component or a module. For example a header is a module and it might contain a logo and a navigation menu as part of it. Are these components or modules?</p>
+
+<p>Ultimately it doesn’t matter too much and you can use your own experience to decide. For me, in a recent project it made sense for the logo to be a component of the header, and the navigation menu to be a module within the header.</p>
+
+<p>Ultimately, only you understand <em>your</em> project requirements and if you get this wrong, changing a component for a module or vice versa is a very easy thing to do.</p>
+
+<h2 id="creating-a-module">Creating a module</h2>
+
+<p>Let’s build a module together. We’re going to build a simplified shopping basket which is made up of a title and some products each of which contain the product title and a remove button. Here is the HTML we might typically use:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="basket"&gt;
+    &lt;h2 class="basket-title"&gt;Basket&lt;/h2&gt;
+    &lt;div class="basket-item"&gt;
+        &lt;h3 class="basket-productTitle"&gt;Product title&lt;/h3&gt;
+        &lt;form&gt;
+            &lt;input type="submit" class="basket-removeButton" value="Remove"&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<p>And the selectors for that:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/* module container */
+.basket {}
+
+/* components */
+.basket-title {}
+.basket-item {}
+.basket-productTitle {}
+.basket-removeButton {}
+</code></pre>
+</div>
+
+<p>That was straight forward.</p>
+
+<h2 id="creating-a-second-version-of-a-module">Creating a second version of a module</h2>
+
+<p>Now, let’s say that during the checkout process there is a similar, cut-down version of the basket—perhaps it has a title of “Order Summary” as opposed to “Your Basket”. And perhaps it doesn’t have the capability to remove products.</p>
+
+<h3 id="dont-be-tempted-to-reuse">Don’t be tempted to reuse</h3>
+
+<p>You might be tempted to try and reuse the basket, but as we have learnt in the chapter about Reuse, this is problematic for many reasons.</p>
+
+<p>Additionally, your template or partial will require conditional logic to handle the differences. The more conditionality you have, the more complicated it is to touch. And, due to this conditionality, the changes you make to the template might cause regression in a condition you’re not currently testing, making it harder to maintain.</p>
+
+<h3 id="duplicate-duplicate-duplicate">Duplicate duplicate duplicate</h3>
+
+<p><em>MaintainableCSS</em> of course, advises to duplicate the module instead. In a recent project, I named the new version <code class="highlighter-rouge">.orderSummary</code>. There was similarities but just a few differences was enough to duplicate instead of the pain of trying to reuse.</p>
+
+<p>Finally, notice how with the CSS above, we have ended up with Semantic naming and encapsulated styles, making this very easy to maintain, upgrade or AB test, as and when required without fear of regression elsewhere.</p>
+
+        </div>
+        <div class="share">
+	<a class="share-button" href="https://twitter.com/share?hashtags=css,mcss&amp;text=MaintainableCSS&mdash;an approach to writing modular, scalable and maintainable CSS.&amp;via=adambsilver&url=/maintainablecss-cn">Share on Twitter</a>
+</div>
+        <div class="chapterNavigation chapterNavigation-last ">
+	<div class="chapterNavigation-inner">
+		
+			<a class="chapterNavigation-previous" href="/maintainablecss-cn/chapters/conventions/">&larr; <span class="chapterNavigation-label">Previous:</span> Conventions</a>
+		
+		
+			<a class="chapterNavigation-next" href="/maintainablecss-cn/chapters/state/"><span class="chapterNavigation-label">Next:</span> State &rarr;</a>
+		
+	</div>
+</div>
+        <div class="chapters">
+	<div class="chapters-inner">
+		<h2>Chapters</h2>
+		<ol>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/introduction/">
+							介绍
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/semantics/">
+							语义化(Semantics)
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/reuse/">
+							Reuse
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/ids/">
+							IDs
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/conventions/">
+							Conventions
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class="chapters-isCurrentPage"
+						href="/maintainablecss-cn/chapters/modules/">
+							Modules
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/state/">
+							State
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/modifiers/">
+							Modifiers
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/versioning/">
+							Versioning
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/javascript/">
+							Javascript
+					</a>
+				</li>
+			
+				<li>
+					<a
+						class=""
+						href="/maintainablecss-cn/chapters/faqs/">
+							FAQs
+					</a>
+				</li>
+			
+		</ol>
+	</div>
+</div>
+        <div class="footer">
+	<div class="footer-inner">
+    <p>Created by <a href="http://adamsilver.io">Adam Silver</a>, a UX engineer from London. Making things simple and human.</p>
+		<p><a href="http://owenyang0.github.io/about/">Owen Yang</a> 翻译，一个来自中国的前端工程师。</p>
+	</div>
+</div>
+	</body>
+</html>

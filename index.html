@@ -1,0 +1,284 @@
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en">
+	<head>
+        <title> MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="initial-scale=1.0">
+<meta name="Author" content="Adam Silver">
+<meta property="og:locale" content="en_GB">
+<meta property="og:type" content="website">
+<meta property="og:title" content=" MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+
+
+	<meta property="og:description" content="MaintainableCSS 是一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+
+
+<meta property="og:url" content="/maintainablecss-cn/">
+<meta property="og:site_name" content="MaintainableCSS">
+<meta property="og:image" content="/maintainablecss-cn/assets/img/card1.png">
+<meta property="og:image:width" content="118">
+<meta property="og:image:height" content="118">
+
+<meta name="twitter:card" content="summary">
+
+
+	<meta name="twitter:description" content="MaintainableCSS 是一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+
+
+<meta name="twitter:title" content=" MaintainableCSS - 一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+<meta name="twitter:site" content="@adambsilver">
+<meta name="twitter:creator" content="@adambsilver">
+
+
+	<meta itemprop="description" content="MaintainableCSS 是一种哲学，教你如何编写模块化，可扩展性，可维护性的CSS。">
+
+
+<meta property="twitter:image" content="/maintainablecss-cn/assets/img/card1.png">
+
+<link rel="stylesheet" href="/maintainablecss-cn/assets/css/main.css" type="text/css" media="all">
+
+<link rel="canonical" href="/maintainablecss-cn/">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/maintainablecss-cn/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/maintainablecss-cn/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/maintainablecss-cn/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/maintainablecss-cn/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/maintainablecss-cn/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/maintainablecss-cn/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/maintainablecss-cn/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/maintainablecss-cn/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/maintainablecss-cn/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/maintainablecss-cn/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/maintainablecss-cn/manifest.json">
+<link rel="mask-icon" href="/maintainablecss-cn/safari-pinned-tab.svg" color="#001f3f">
+<meta name="msapplication-TileColor" content="#001F3F">
+<meta name="msapplication-TileImage" content="/maintainablecss-cn/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create','UA-57882600-1','auto');
+  ga('send','pageview');
+
+</script>
+
+
+	</head>
+	<body>
+        <div class="header">
+	<div class="header-inner">
+		<!-- <div class="logo"><a href="/">MaintainableCSS</a></div> -->
+		<div class="logo"><a href="/maintainablecss-cn/index.html"><img src="/maintainablecss-cn/assets/img/logo_small.png" width="35" height="35"></a></div>
+		<div class="navigation">
+	<a class="navigation-isActive" href="/maintainablecss-cn/index.html">首页</a>
+  <a class="" href="/maintainablecss-cn/chapters/">目录</a>
+	<a href="http://maintainablecss.com/">English</a>
+	<a href="https://github.com/owenyang0/maintainablecss-cn">Github</a>
+</div>
+	</div>
+</div>
+		<div class="hero">
+
+	<img class="hero-logo" src="/maintainablecss-cn/assets/img/logo.png" width="250" height="250" />
+
+	<h1>MaintainableCSS</h1>
+	<p>如何编写 CSS 而不用再去过分担心原有的样式会受你的影响？<em>MaintainableCSS</em> 就是这样一种哲学，教你编写 <em>模块化</em>, <em>可扩展</em> 以及 <em>可维护</em> 的CSS.</p>
+	<a class="hero-button" href="/maintainablecss-cn/chapters/introduction/">马上阅读</a>
+</div>
+<!--
+	<h2>Maintainable &mdash; Adjective</h2>
+	<p>Keep in good condition. Keep at the same level.</p>
+-->
+
+<div class="benefits">
+	<h2>MaintainableCSS 带来的优势</h2>
+	<div class="benefits-wrapper">
+		<div class="benefit">
+			<h3>封装以及模块化</h3>
+			<p>你对样式有完全的控制。</p>
+		</div>
+		<div class="benefit">
+			<h3>满足任何设计需求</h3>
+			<p>根据你的需要，这会非常灵活。</p>
+		</div>
+		<div class="benefit">
+			<h3>无任何工具依赖</h3>
+			<p>当然你可以使用任何你愿意尝试的工具。</p>
+		</div>
+		<div class="benefit">
+			<h3>易学性</h3>
+			<p>读完这篇入门指导，你就知道了。</p>
+		</div>
+		<div class="benefit">
+			<h3>适合任何规模的项目</h3>
+			<p>不管你项目规模有多大，<em>MaintainableCSS</em> 都会有用。</p>
+		</div>
+		<div class="benefit">
+			<h3>在你合适的时间升级</h3>
+			<p>从今天开始，你就可以选择将其应用到你的项目上。你可以一点一点地升级，而不用一次性地全部搞定。</p>
+		</div>
+		<div class="benefit">
+			<h3>不会有权重过高的问题</h3>
+			<p>能够避免因过度覆写而权重过高的问题。每次你都可以认为是在一张空白画板，从零开始写。</p>
+		</div>
+		<div class="benefit">
+			<h3>状态管理的方便性</h3>
+			<p>根据状态而改变样式，如 <em>loading</em>, <em>disabled</em> 和 <em>hiding</em>状态等。</p>
+		</div>
+		<div class="benefit">
+			<h3>不用担心回归测试</h3>
+			<p>修改一个现有样式的时候，你不会担心会影响其他地方的回归测试。</p>
+		</div>
+		<div class="benefit">
+			<h3>适合任何规模的团队</h3>
+			<p>不论团队是只有一人，还是有100人。MaintainableCSS 都非常有用。</p>
+		</div>
+		<div class="benefit">
+			<h3>语义化的 HTML 和 CSS</h3>
+			<p>MaintainableCSS 拥抱语义化的 HTML and CSS, 故你可以获得所有的好处。</p>
+		</div>
+		<div class="benefit">
+			<h3>高性能的 CSS</h3>
+			<p>基于约定而使用扁平风格和高性能的选择器。</p>
+		</div>
+		<div class="benefit">
+			<h3>易于发现冗余代码</h3>
+			<p>非常容易发现冗余代码，找到它，然后删除它。</p>
+		</div>
+		<div class="benefit">
+			<h3>方便 AB 测试与升级</h3>
+			<p>想要测试一个模块的不同样式？MaintainableCSS 会让其变得轻松而愉快。</p>
+		</div>
+		<a class="benefit-readNowButton" href="/maintainablecss-cn/chapters/introduction">马上阅读</a>
+	</div>
+</div>
+<div class="recommendations">
+	<h2 class="recommendations-title">评价</h2>
+	<div class="recommendations-item">
+		<blockquote>
+			<p>&ldquo;A handy little read on learning how to write modular and maintainable CSS.&rdquo;
+			<br />&mdash; <cite>Smashing Magazine</cite>
+			</p>
+		</blockquote>
+	</div>
+	<div class="recommendations-item">
+		<blockquote>
+			<p>&ldquo;Finally a good book on how to write maintainable CSS.&rdquo;
+			<br />&mdash; <cite>Alexander Dajani</cite>
+			</p>
+		</blockquote>
+	</div>
+	<div class="recommendations-item">
+		<blockquote>
+			<p>&ldquo;I actually love everything about this.&rdquo;
+			<br />&mdash; <cite>Simon Taggart</cite>
+			</p>
+		</blockquote>
+	</div>
+	<div class="recommendations-item">
+		<blockquote>
+			<p>&ldquo;Totally agree with this approach to CSS.&rdquo;
+			<br />&mdash; <cite>Marcel Reyna</cite>
+			</p>
+		</blockquote>
+	</div>
+</div>
+
+<div class="chapters">
+	<div class="chapters-inner">
+		<h2>Chapters</h2>
+		<ol>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/introduction/">
+							介绍
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/semantics/">
+							语义化(Semantics)
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/reuse/">
+							Reuse
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/ids/">
+							IDs
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/conventions/">
+							Conventions
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/modules/">
+							Modules
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/state/">
+							State
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/modifiers/">
+							Modifiers
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/versioning/">
+							Versioning
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/javascript/">
+							Javascript
+					</a>
+				</li>
+			
+				<li>
+					<a class="" href="/maintainablecss-cn/chapters/faqs/">
+							FAQs
+					</a>
+				</li>
+			
+		</ol>
+	</div>
+</div>
+
+<!-- <div class="gotQuestion">
+	<div class="gotQuestion-inner">
+		<h2>Got a question, issue or suggestion?</h2>
+		<p>Just <a href="http://github.com/adamsilver/maintainablecss.com/issues/new/">raise an issue for discussion</a> on Github.</p>
+	</div>
+</div> -->
+
+        <div class="footer">
+	<div class="footer-inner">
+    <p>Created by <a href="http://adamsilver.io">Adam Silver</a>, a UX engineer from London. Making things simple and human.</p>
+		<p><a href="http://owenyang0.github.io/about/">Owen Yang</a> 翻译，一个来自中国的前端工程师。</p>
+	</div>
+</div>
+	</body>
+</html>

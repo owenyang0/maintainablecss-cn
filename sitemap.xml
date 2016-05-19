@@ -1,30 +1,124 @@
----
----
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
-    <url>
-        <loc>{{site.url}}{{ post.url | remove: 'index.html' }}</loc>
-    </url>
-    {% endfor %}
+    
 
-    {% for page in site.pages %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
+    
+    
+    
     <url>
-        <loc>{{site.url}}{{ page.url | remove: 'index.html' }}</loc>
+        <loc>/maintainablecss-cn/404.html</loc>
     </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+    
+    
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/</loc>
+    </url>
+    
+    
+    
+    
+    
 
-    {% for page in site.chapters %}
-    {% if page.layout != nil %}
-    {% if page.layout != 'feed' %}
+    
+    
+    
     <url>
-        <loc>{{site.url}}{{ page.url | remove: 'index.html' }}</loc>
+        <loc>/maintainablecss-cn/chapters/introduction/</loc>
     </url>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/semantics/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/reuse/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/ids/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/conventions/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/modules/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/state/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/modifiers/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/versioning/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/javascript/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>/maintainablecss-cn/chapters/faqs/</loc>
+    </url>
+    
+    
+    
 </urlset>
